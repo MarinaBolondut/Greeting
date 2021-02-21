@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      function display_date() {
+        var x = new Date();
+        var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getFullYear();
+        x1 = x1 + " - " + x.getHours() + ":" + x.getMinutes();
+        document.getElementById("clock").innerHTML = x1;
+        display_date();
+      }
+    </script>
+    <title>Welcome</title>
+  </head>
+  <body onload="display_date()">
+    <center>
+      <div class="container">
+        <h1 id="greet">Welcome</h1>
+        <h3>I hope you have a lovely day</h3>
+        <p id="clock"></p>
+      </div>
+    </center>
+  </body>
+</html>
